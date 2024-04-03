@@ -12,6 +12,6 @@ Welcome to the CP Simulator, a powerful tool designed for RMCS/datalogging QA. T
 
 1. SSH into the console via windows command prompt: `ssh chris@rpiz2w.local`
 2. Change directory: `cd zapmegently`
-3. Run the script: `./simulator`
+3. Run the script: `./simulator.py`
 
 Enjoy using your CP Simulator!
