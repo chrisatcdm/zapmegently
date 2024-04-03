@@ -16,3 +16,16 @@ Welcome to the CP Simulator, a powerful tool designed for RMCS/datalogging QA. T
 3. Run the script: `./simulator.py`
 
 Enjoy using your CP Simulator!
+
+# Upcoming Features
+
+- Non interruption mode
+- Interference switching (9/3 and a 12/3 defaults) but also make them customisable
+- Custom mode where you can program in all of the parameters
+- Be able to program/upload potential curves
+- Add SD card slot
+- Add programmable interface to add local wifi credentials
+- File viewer for web interface
+- Shunt simulation
+- Non-coarse on/off curve
+- Depolarisation curve
