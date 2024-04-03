@@ -49,7 +49,8 @@ def get_menu_choice():
         print("1. 0-3V calibration ")
         print("2. 12/3 Interrupt cycle (protected) ")
         print("3. 12/3 Interrupt cycle (unprotected) ")
-        print("4. Exit ")
+        print("4. Traction output")
+        print("5. Exit ")
         print()
         print(97 * "-")
 
@@ -59,7 +60,7 @@ def get_menu_choice():
     while loop:  # While loop which will keep going until loop = False
         clear_screen()
         print_menu()  # Displays menu
-        choice = input("Enter your choice [1-4]: ")
+        choice = input("Enter your choice [1-5]: ")
         if choice == '1':
             clear_screen()
             print("Enter custom values for calibration, or press enter to use default values.\n")
@@ -130,6 +131,29 @@ def get_menu_choice():
             del pwm_controller
             loop = True
         elif choice == '4':
+            clear_screen()
+            print("Starting traction simulation.\n")
+
+            # Initialize the PWMController
+            pwm_controller = PWMController(led_pin=12, frequency=38, duty_cycle=0)
+            interrupt_thread = threading.Thread(target=pwm_controller.start_traction_simulation, args=())
+            interrupt_thread.start()
+
+            # Inform the user and wait for input synchronously
+            input("Traction simulation running. Press Enter at any time to stop...")
+
+            # Signal the interrupter to stop
+            pwm_controller.stop_traction_simulation()
+
+            # Wait for the interrupter thread to complete
+            interrupt_thread.join()
+
+            del pwm_controller
+            loop = True
+
+
+            
+        elif choice == '5':
             int_choice = -1
             print("Exiting...")
             loop = False  # This will make the while loop to end
