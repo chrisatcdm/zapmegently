@@ -17,7 +17,8 @@ Welcome to the CP Simulator, a powerful tool designed for RMCS/datalogging QA. T
 
 Enjoy using your CP Simulator!
 
-# Upcoming Features
+
+### Upcoming Features
 
 - Non interruption mode
 - Interference switching (9/3 and a 12/3 defaults) but also make them customisable
