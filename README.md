@@ -1,4 +1,4 @@
-# Readme for the CP Simulator
+# CP Simulator
 
 Welcome to the CP Simulator, a powerful tool designed for RMCS/datalogging QA. This simulator includes a range of features to help you test and calibrate your systems.
 
